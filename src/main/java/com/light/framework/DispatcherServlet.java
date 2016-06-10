@@ -69,7 +69,7 @@ public class DispatcherServlet extends HttpServlet {
 		Handler handler = ControllerHelper.getHandler(requestMethod,
 				requestPath);
 		if (handler != null) {
-			// huoqController类及其Bean实例
+			// 获取Controller类及其Bean实例
 			Class<?> controllerClass = handler.getControllerClass();
 			Object controllerBean = BeanHelper.getBean(controllerClass);
 			// 创建请求参数对象
