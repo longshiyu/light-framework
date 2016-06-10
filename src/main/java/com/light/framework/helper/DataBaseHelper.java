@@ -28,7 +28,7 @@ import com.light.framework.util.PropsUtil;
  * @author longjiazuo
  * 
  */
-public class DataBaseHelper {
+public final class DataBaseHelper {
 
 	private static final Logger LOGGER = LoggerFactory
 			.getLogger(DataBaseHelper.class);
