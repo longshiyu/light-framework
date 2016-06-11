@@ -213,7 +213,7 @@ public class CustomerService {
 	}
 }
 ```
-##5. 编写 Action 类
+##6. 编写 Action 类
 ```
 package org.light4j.sample.controller;
 
@@ -331,14 +331,14 @@ public class CustomerController {
 	}
 }
 ```
-##6. 编写视图
+##7. 编写视图
 在 Action 中使用了 JSP 作为视图展现技术，需要在编写以下 JSP 文件：
 * customer.jsp
 * customer_show.jsp
 * customer_create.jsp
 * customer_edit.jsp <br>
 
-##7.  编写配置文件
+##8.  编写配置文件
 在src/main/resources下面增加下面几个配置文件:
 数据库配置文件config.properties:
 ```
@@ -372,7 +372,7 @@ log4j.appender.file.layout.ConversionPattern=%d{HH:mm:ss,SSSS} %p %c (%L) -%m%n
 
 log4j.logger.org.lightFramework.use=DEBUG
 ```
-##8. 编写web.xml引入light-framework,在web.xml中引入下面的servlet即可:
+##9. 编写web.xml引入light-framework,在web.xml中引入下面的servlet即可:
 ```
 <servlet>
 		<servlet-name>DispatcherServlet</servlet-name>
@@ -384,6 +384,8 @@ log4j.logger.org.lightFramework.use=DEBUG
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 ```
-提示：更多相关细节，请参考 [Light Sample](https://github.com/longjiazuo/light-sample) 示例。
+提示：更多相关细节，请参考 [Light Sample](https://github.com/longjiazuo/light-sample) 示例。<br>
+如果上面没有问题，启动项目之后，在浏览器输入:http://127.0.0.1/light-sample/customer访问就可以看到下面内容了。
+![](https://github.com/longjiazuo/light-sample/tree/master/doc/Logo/sample.png)
 #提高
 TODO
