@@ -7,6 +7,7 @@
 	<version>1.0.0</version>
 	<name>LightFramework Maven Webapp</name>
 	<url>http://maven.apache.org</url>
+
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -77,9 +78,11 @@
 		</dependency>
 
 	</dependencies>
+
 	<build>
 		<finalName>LightFramework</finalName>
 		<plugins>
+			<!-- Source -->
 			<plugin>
 				<artifactId>maven-source-plugin</artifactId>
 				<version>2.4</version>
@@ -92,6 +95,21 @@
 					</execution>
 				</executions>
 			</plugin>
+			<!-- Javadoc -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.9.1</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- Tomcat -->
 			<plugin>
 				<groupId>org.apache.tomcat.maven</groupId>
 				<artifactId>tomcat7-maven-plugin</artifactId>
