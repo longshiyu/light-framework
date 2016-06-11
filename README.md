@@ -384,9 +384,9 @@ log4j.logger.org.lightFramework.use=DEBUG
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 ```
-提示：更多相关细节，请参考 [Light Sample](https://github.com/longjiazuo/light-sample) 示例。<br>
 如果上面没有问题，启动项目之后，在浏览器输入:http://127.0.0.1/light-sample/customer<br>
 没问题应该就可以看到下面内容了。<br>
 ![](https://github.com/longjiazuo/light-sample/tree/master/doc/Logo/sample.png)
+提示：更多相关细节，请参考 [Light Sample](https://github.com/longjiazuo/light-sample) 示例。<br>
 #提高
 TODO
