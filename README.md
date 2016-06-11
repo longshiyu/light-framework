@@ -1,12 +1,12 @@
 #Light Framework
-#简介
+##简介
 
-=====
+------
 轻量级javaweb框架
-#入门
+##入门
 
-=====
-##1. 创建一个 Maven Web 工程
+-------
+###1. 创建一个 Maven Web 工程
 ---------
 整个工程的目录结构如下:<br/>
 ```
@@ -28,7 +28,7 @@ org/
 　　　　　　┗ service/
 ```
 可见，基础包名为：org.light4j.sample，下面的配置中会用到它。
-##2. 配置 Maven 依赖
+###2. 配置 Maven 依赖
 ------------------
 由于light-framework还没有发布到中央仓库，也没有发布到别的第三方仓库(后期会做这个工作).所以需要把light-framework下载到本地，打包到本地仓库，编辑pom.xml 文件，添加 light-framework 依赖：<br/>
 ```
@@ -38,7 +38,7 @@ org/
     <version>1.0.0</version>
 </dependency>
 ```
-##3. 编写 Light 配置
+###3. 编写 Light 配置
 ----------------------
 在 resources 目录下，创建一个名为 light.properties 的文件，内容如下：<br/>
 ```
@@ -51,7 +51,7 @@ light.framework.jdbc.username=root
 light.framework.jdbc.password=123456
 ```
 提示：需根据实际情况修改以上配置。
-##4. 编写 Entity 类
+###4. 编写 Entity 类
 ```
 package org.light4j.sample.model;
 
@@ -142,7 +142,7 @@ public class Customer {
 	}
 }
 ```
-##5. 编写 Service 类
+###5. 编写 Service 类
 ```
 package org.light4j.sample.service;
 import java.util.List;
@@ -218,7 +218,7 @@ public class CustomerService {
 	}
 }
 ```
-##6. 编写 Action 类
+###6. 编写 Action 类
 ```
 package org.light4j.sample.controller;
 
@@ -336,14 +336,14 @@ public class CustomerController {
 	}
 }
 ```
-##7. 编写视图
+###7. 编写视图
 在 Action 中使用了 JSP 作为视图展现技术，需要在编写以下 JSP 文件：
 * customer.jsp
 * customer_show.jsp
 * customer_create.jsp
 * customer_edit.jsp <br>
 
-##8.  编写配置文件
+####8.  编写配置文件
 在src/main/resources下面增加下面几个配置文件:
 数据库配置文件config.properties:
 ```
@@ -377,7 +377,7 @@ log4j.appender.file.layout.ConversionPattern=%d{HH:mm:ss,SSSS} %p %c (%L) -%m%n
 
 log4j.logger.org.lightFramework.use=DEBUG
 ```
-##9. 编写web.xml引入light-framework,在web.xml中引入下面的servlet即可:
+###9. 编写web.xml引入light-framework,在web.xml中引入下面的servlet即可:
 ```
 <servlet>
 		<servlet-name>DispatcherServlet</servlet-name>
@@ -397,5 +397,5 @@ log4j.logger.org.lightFramework.use=DEBUG
 
 -----
 提示：更多相关细节，请参考 [Light Sample](https://github.com/longjiazuo/light-sample) 示例。<br>
-#提高
+##提高
 TODO
