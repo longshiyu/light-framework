@@ -337,7 +337,8 @@ public class CustomerController {
 * customer_show.jsp
 * customer_create.jsp
 * customer_edit.jsp <br>
-##7. 编写配置文件
+
+##7.  编写配置文件
 在src/main/resources下面增加下面几个配置文件:
 数据库配置文件config.properties:
 ```
