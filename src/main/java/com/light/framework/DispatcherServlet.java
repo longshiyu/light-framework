@@ -66,8 +66,7 @@ public class DispatcherServlet extends HttpServlet {
 		String requestMethod = request.getMethod().toLowerCase();
 		String requestPath = request.getPathInfo();
 		// 获取Action处理器
-		Handler handler = ControllerHelper.getHandler(requestMethod,
-				requestPath);
+		Handler handler = ControllerHelper.getHandler(requestMethod,requestPath);
 		if (handler != null) {
 			// 获取Controller类及其Bean实例
 			Class<?> controllerClass = handler.getControllerClass();
@@ -99,8 +98,7 @@ public class DispatcherServlet extends HttpServlet {
 			Param param = new Param(paramMap);
 			// 调用Action方法
 			Method actionMethod = handler.getActionMethod();
-			Object result = ReflectionUtil.invokeMethod(controllerBean,
-					actionMethod, param);
+			Object result = ReflectionUtil.invokeMethod(controllerBean,actionMethod, param);
 			// 处理Action方法返回值
 			if (result instanceof View) {
 				// 返回jsp页面
@@ -112,12 +110,9 @@ public class DispatcherServlet extends HttpServlet {
 					} else {
 						Map<String, Object> model = view.getModel();
 						for (Map.Entry<String, Object> entry : model.entrySet()) {
-							request.setAttribute(entry.getKey(),
-									entry.getValue());
+							request.setAttribute(entry.getKey(),entry.getValue());
 						}
-						request.getRequestDispatcher(
-								ConfigHelper.getAppJspPath() + path).forward(
-								request, response);
+						request.getRequestDispatcher(ConfigHelper.getAppJspPath() + path).forward(request, response);
 					}
 				}
 			} else if (result instanceof Data) {
