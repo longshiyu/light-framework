@@ -4,7 +4,7 @@
 ##1. 创建一个 Maven Web 工程
 ---------
 整个工程的目录结构如下:<br/>
-`
+```
 light-sample/ <br/>
 　　┗ src/ <br/>
 　　　　┗ main/ <br/>
@@ -12,7 +12,7 @@ light-sample/ <br/>
 　　　　　　┗ resources/ <br/>
 　　　　　　┗ webapp/ <br/>
 　　┗ pom.xml> <br/>
-``
+```
 在 java 目录下，创建以下包名目录结构：<br/>
 org/ <br/>
 　　┗ light4j/ <br/>
