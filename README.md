@@ -47,7 +47,29 @@ light.framework.jdbc.username=root
 light.framework.jdbc.password=123456
 ```
 提示：需根据实际情况修改以上配置。
-###4. 编写 Entity 类
+###4. 建库，数据库用mysql
+```
+-- ----------------------------
+-- Table structure for customer
+-- ----------------------------
+DROP TABLE IF EXISTS `customer`;
+CREATE TABLE `customer` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `contact` varchar(255) DEFAULT NULL,
+  `telephone` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `remark` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of customer
+-- ----------------------------
+INSERT INTO `customer` VALUES ('1', 'customer1', 'Jack', '13512345678', 'Jack@gmail.com', null);
+INSERT INTO `customer` VALUES ('2', 'customer2', 'Rose', '13623456789', 'rose@gmail.com', null);
+```
+###5. 编写 Entity 类
 ```
 package org.light4j.sample.model;
 
@@ -138,7 +160,7 @@ public class Customer {
 	}
 }
 ```
-###5. 编写 Service 类
+###6. 编写 Service 类
 ```
 package org.light4j.sample.service;
 import java.util.List;
@@ -214,7 +236,7 @@ public class CustomerService {
 	}
 }
 ```
-###6. 编写 Action 类
+###7. 编写 Action 类
 ```
 package org.light4j.sample.controller;
 
@@ -332,14 +354,14 @@ public class CustomerController {
 	}
 }
 ```
-###7. 编写视图
+###8. 编写视图
 在 Action 中使用了 JSP 作为视图展现技术，需要在编写以下 JSP 文件：
 * customer.jsp
 * customer_show.jsp
 * customer_create.jsp
 * customer_edit.jsp <br>
 
-####8.  编写配置文件
+####9.  编写配置文件
 在src/main/resources下面增加下面几个配置文件:
 数据库配置文件config.properties:
 ```
@@ -373,7 +395,7 @@ log4j.appender.file.layout.ConversionPattern=%d{HH:mm:ss,SSSS} %p %c (%L) -%m%n
 
 log4j.logger.org.lightFramework.use=DEBUG
 ```
-###9. 编写web.xml引入light-framework,在web.xml中引入下面的servlet即可:
+###10. 编写web.xml引入light-framework,在web.xml中引入下面的servlet即可:
 ```
 <servlet>
 		<servlet-name>DispatcherServlet</servlet-name>
