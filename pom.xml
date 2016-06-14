@@ -5,7 +5,7 @@
 	<artifactId>light-framework</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0.0</version>
-	<name>LightFramework Maven Webapp</name>
+	<name>Light Framework</name>
 	<description>Light is a lightweight Java Web Framework and reusable components.</description>
 	<url>http://www.light4j.org/</url>
 
